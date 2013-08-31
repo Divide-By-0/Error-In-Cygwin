@@ -1,0 +1,69 @@
+$ make
+g++ -c xv11_laser.cpp -I. -I/usr/local/include
+In file included from ./boost/asio/async_result.hpp:18:0,
+                 from ./boost/asio.hpp:20,
+                 from ./xv11_laser.h:1,
+                 from xv11_laser.cpp:1:
+./boost/asio/detail/config.hpp:367:5: warning: #warning Please define _WIN32_WINNT or _WIN32_WINDOWS appropriately.
+./boost/asio/detail/config.hpp:368:5: warning: #warning For example, add -D_WIN32_WINNT=0x0501 to the compiler command line.
+./boost/asio/detail/config.hpp:369:5: warning: #warning Assuming _WIN32_WINNT=0x0501 (i.e. Windows XP target).
+./boost/asio/detail/config.hpp:393:5: error: #error You must add -D__USE_W32_SOCKETS to your compiler options.
+In file included from /usr/lib/gcc/i686-pc-cygwin/4.5.3/../../../../include/w32api/winsock2.h:56:0,
+                 from ./boost/asio/detail/socket_types.hpp:31,
+                 from ./boost/asio/detail/impl/winsock_init.ipp:22,
+                 from ./boost/asio/detail/winsock_init.hpp:125,
+                 from ./boost/asio/io_service.hpp:35,
+                 from ./boost/asio/basic_io_object.hpp:19,
+                 from ./boost/asio/basic_socket.hpp:20,
+                 from ./boost/asio/basic_datagram_socket.hpp:20,
+                 from ./boost/asio.hpp:21,
+                 from ./xv11_laser.h:1,
+                 from xv11_laser.cpp:1:
+/usr/lib/gcc/i686-pc-cygwin/4.5.3/../../../../include/w32api/psdk_inc/_fd_types.h:100:2: warning: #warning "fd_set and associated macros have been defined in sys/types.      This can cause runtime problems with W32 sockets"
+In file included from ./boost/asio/detail/impl/posix_tss_ptr.ipp:24:0,
+                 from ./boost/asio/detail/posix_tss_ptr.hpp:77,
+                 from ./boost/asio/detail/tss_ptr.hpp:27,
+                 from ./boost/asio/detail/call_stack.hpp:20,
+                 from ./boost/asio/impl/handler_alloc_hook.ipp:19,
+                 from ./boost/asio/handler_alloc_hook.hpp:80,
+                 from ./boost/asio/detail/handler_alloc_helpers.hpp:21,
+                 from ./boost/asio/detail/bind_handler.hpp:19,
+                 from ./boost/asio/detail/wrapped_handler.hpp:18,
+                 from ./boost/asio/io_service.hpp:25,
+                 from ./boost/asio/basic_io_object.hpp:19,
+                 from ./boost/asio/basic_socket.hpp:20,
+                 from ./boost/asio/basic_datagram_socket.hpp:20,
+                 from ./boost/asio.hpp:21,
+                 from ./xv11_laser.h:1,
+                 from xv11_laser.cpp:1:
+./boost/asio/error.hpp:77:17: error: a function call cannot appear in a constant-expression
+./boost/asio/error.hpp:130:15: error: a function call cannot appear in a constant-expression
+./boost/asio/error.hpp:135:19: error: a function call cannot appear in a constant-expression
+./boost/asio/error.hpp:149:23: error: a function call cannot appear in a constant-expression
+./boost/asio/error.hpp:163:15: error: a function call cannot appear in a constant-expression
+In file included from ./boost/asio/detail/socket_types.hpp:31:0,
+                 from ./boost/asio/detail/impl/winsock_init.ipp:22,
+                 from ./boost/asio/detail/winsock_init.hpp:125,
+                 from ./boost/asio/io_service.hpp:35,
+                 from ./boost/asio/basic_io_object.hpp:19,
+                 from ./boost/asio/basic_socket.hpp:20,
+                 from ./boost/asio/basic_datagram_socket.hpp:20,
+                 from ./boost/asio.hpp:21,
+                 from ./xv11_laser.h:1,
+                 from xv11_laser.cpp:1:
+/usr/lib/gcc/i686-pc-cygwin/4.5.3/../../../../include/w32api/winsock2.h:995:68: error: declaration of C function ‘int gethostname(char*, int)’ conflicts with
+/usr/include/sys/unistd.h:238:6: error: previous declaration ‘int gethostname(char*, size_t)’ here
+In file included from ./boost/asio/detail/fd_set_adapter.hpp:20:0,
+                 from ./boost/asio/detail/select_reactor.hpp:26,
+                 from ./boost/asio/detail/reactor.hpp:27,
+                 from ./boost/asio/detail/win_iocp_socket_service.hpp:35,
+                 from ./boost/asio/datagram_socket_service.hpp:26,
+                 from ./boost/asio/basic_datagram_socket.hpp:21,
+                 from ./boost/asio.hpp:21,
+                 from ./xv11_laser.h:1,
+                 from xv11_laser.cpp:1:
+./boost/asio/detail/win_fd_set_adapter.hpp: In member function ‘bool boost::asio::detail::win_fd_set_adapter::is_set(boost::asio::detail::socket_type) const’:
+./boost/asio/detail/win_fd_set_adapter.hpp:87:70: error: ‘__WSAFDIsSet’ was not declared in this scope
+Makefile:13: recipe for target `xv11_laser.o' failed
+make: *** [xv11_laser.o] Error 1
+
